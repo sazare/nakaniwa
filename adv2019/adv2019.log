@@ -1,0 +1,17 @@
+advent calender of julia 2019 への投稿用ソース作成
+
+20191110日
+1. unificationのコードを投稿したい。
+
+2. substの第三引数にTListを指定するとエラーになる。
+   Arrayにして動いている。
+
+　TListはArray{Term,1}で、Term=Union{Expr, Symbol}
+　substからsubst0を呼び出すとき、subst0の第三引数としてExprとSymbolの2つの
+メソッドディスパッチを定義しているが、呼び出されるときの型はTermなので
+不一致になっているようす
+　しかし、subst0はTermなので形の上ではいっちしている。
+　実行時にTermという型は存在せず、ExprとSymbolになっているからかも
+
+3. substまで作った。unificationはテストを作った
+
