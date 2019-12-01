@@ -35,22 +35,30 @@ function montepim(nums)
 end
 
 @info :for
+@info 100000
 GC.gc()
 @time println(montepif(100000))
+@info 1000000
 GC.gc()
 @time println(montepif(1000000))
+@info 10000000
 GC.gc()
 @time println(montepif(10000000))
+@info 100000000
 GC.gc()
 @time println(montepif(100000000))
 
 @info map
+@info 100000
 GC.gc()
 @time println(montepim(100000))
+@info 1000000
 GC.gc()
 @time println(montepim(1000000))
+@info 10000000
 GC.gc()
 @time println(montepim(10000000))
+@info 100000000
 GC.gc()
 @time println(montepim(100000000))
 
