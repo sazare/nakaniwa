@@ -1,0 +1,29 @@
+1. in sbcl
+https://www.quicklisp.org/beta/#installation
+get https://beta.quicklisp.org/quicklisp.lisp 
+
+$ curl -O https://beta.quicklisp.org/quicklisp.lisp
+
+
+sbcl --load quicklisp.lisp
+* (quicklisp-quickstart:install)
+(ql:system-apropos "vecto")
+(ql:quickload "vecto")
+(ql:add-to-init-file)
+(quit)
+
+そのご
+
+ (load "~/quicklisp/setup.lisp")
+
+パッケージインストール
+
+(ql:quickload system-name)
+(ql:uninstall system-name)
+(ql:system-apropos substring)
+(ql:add-to-init-file)
+(ql:update-dist "quicklisp")
+(ql:update-client)
+(ql:who-depends-on system-name)
+
+
